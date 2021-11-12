@@ -423,8 +423,8 @@ defmodule BorsNG.GitHub do
   def map_state_to_status(state) do
     case state do
       "pending" -> :running
+      "neutral" -> :running
       "success" -> :ok
-      "neutral" -> :ok
       "skipped" -> :error
       "failure" -> :error
       "cancelled" -> :error
